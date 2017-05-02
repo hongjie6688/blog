@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hj-blog-common" />
+        <module name="hj-blog-model" />
+        <module name="hj-blog-provider" />
+        <module name="hj-blog-provider-api" />
+        <module name="hj-blog-provider-service" />
+        <module name="hj-blog-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hj-blog" target="8" />
+      <module name="hj-blog-common" target="8" />
+      <module name="hj-blog-model" target="8" />
+      <module name="hj-blog-provider" target="8" />
+      <module name="hj-blog-provider-api" target="8" />
+      <module name="hj-blog-provider-service" target="8" />
+      <module name="hj-blog-web" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

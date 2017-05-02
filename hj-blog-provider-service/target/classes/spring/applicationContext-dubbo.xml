@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd"
+>
+    <dubbo:application name="jim" logger="slf4j"/>
+
+    <dubbo:registry protocol="zookeeper" address="192.168.0.38:2181"/>
+
+    <!-- 多协议配置 -->
+    <dubbo:protocol accesslog="true" name="dubbo" port="20880"/>
+    <dubbo:protocol id="hessian1" name="hessian" port="20890" />
+
+    <dubbo:annotation package="com.hj.blog.service"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.ArticleCategoryService" ref="articleCategoryService" protocol="dubbo"
+                   version="1.0.0">
+        <dubbo:method name="getAllArticleCategory" timeout="500"></dubbo:method>
+    </dubbo:service>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="articleCategoryService" class="com.hj.blog.service.impl.ArticleCategoryServiceImpl" />
+
+    <!-- 声明需要暴露的服务接口 -->
+
+    <dubbo:service interface="com.hj.blog.service.ArticleService" ref="articleService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="articleService" class="com.hj.blog.service.impl.ArticleServiceImpl"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.UserArticleService" ref="userArticleService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="userArticleService" class="com.hj.blog.service.impl.UserArticleServiceImpl"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.MessageBoxService" ref="messageBoxService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="messageBoxService" class="com.hj.blog.service.impl.MessageBoxServiceImpl"/>
+
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.ContributorService" ref="contributorService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="contributorService" class="com.hj.blog.service.impl.ContributorServiceImpl"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.WebUserService" ref="webUserService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="webUserService" class="com.hj.blog.service.impl.WebUserServiceImpl"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.WebBlogService" ref="webBlogService"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="webBlogService" class="com.hj.blog.service.impl.WebBlogServiceImpl"/>
+
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.hj.blog.service.FileService" ref="fileService" protocol="hessian"/>
+    <!-- 和本地服务一样实现服务 -->
+    <bean id="fileService" class="com.hj.blog.service.impl.FileServiceImpl"/>
+
+</beans>

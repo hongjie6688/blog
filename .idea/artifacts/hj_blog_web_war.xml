@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hj-blog-web:war">
+    <output-path>$PROJECT_DIR$/hj-blog-web/target</output-path>
+    <root id="archive" name="hj-blog-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="hj-blog-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hj-blog.iml" filepath="$PROJECT_DIR$/hj-blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hj-blog-common/hj-blog-common.iml" filepath="$PROJECT_DIR$/hj-blog-common/hj-blog-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hj-blog-model/hj-blog-model.iml" filepath="$PROJECT_DIR$/hj-blog-model/hj-blog-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hj-blog-provider-api/hj-blog-provider-api.iml" filepath="$PROJECT_DIR$/hj-blog-provider-api/hj-blog-provider-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hj-blog-provider-service/hj-blog-provider-service.iml" filepath="$PROJECT_DIR$/hj-blog-provider-service/hj-blog-provider-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hj-blog-web/hj-blog-web.iml" filepath="$PROJECT_DIR$/hj-blog-web/hj-blog-web.iml" />
+    </modules>
+  </component>
+</project>

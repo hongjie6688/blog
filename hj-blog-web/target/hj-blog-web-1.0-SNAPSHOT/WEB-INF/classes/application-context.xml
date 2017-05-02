@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="jim" logger="slf4j"/>
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://192.168.0.38:2181"/>
+
+    <!--&lt;!&ndash; 用dubbo协议在20880端口暴露服务 &ndash;&gt;-->
+    <!--<dubbo:protocol name="dubbo" port="20880"/>-->
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.ArticleService"
+                   id="articleService"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.ArticleCategoryService"
+                   id="articleCategoryService"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.MessageBoxService"
+                   id="messageBoxService"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.UserArticleService"
+                   id="userArticleService"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.ContributorService"
+                   id="contributorService"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.WebBlogService"
+                   id="webBlogService"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.WebUserService"
+                   id="webUserService"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="com.hj.blog.service.FileService"
+                   id="fileService"/>
+
+
+</beans>

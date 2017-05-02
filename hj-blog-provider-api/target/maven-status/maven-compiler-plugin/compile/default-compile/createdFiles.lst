@@ -1,0 +1,8 @@
+com\hj\blog\service\WebUserService.class
+com\hj\blog\service\FileService.class
+com\hj\blog\service\MessageBoxService.class
+com\hj\blog\service\ContributorService.class
+com\hj\blog\service\ArticleService.class
+com\hj\blog\service\ArticleCategoryService.class
+com\hj\blog\service\UserArticleService.class
+com\hj\blog\service\WebBlogService.class
